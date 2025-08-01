@@ -11,8 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      PYTHONPATH: ${{ github.workspace }}
 
     steps:
     - uses: actions/checkout@v4
@@ -30,17 +28,10 @@ jobs:
 
     - name: Run tests
       run: pytest
+      env:
+        PYTHONPATH: .
 
     - name: Run linter (Ruff)
       run: ruff check .
       env:
         PYTHONPATH: .
-
-    - name: Build executable (PyInstaller)
-      run: pyinstaller --onefile --windowed --name "ImageMorph Pro" main.py
-
-    - name: Upload executable
-      uses: actions/upload-artifact@v4
-      with:
-        name: ImageMorphPro-Executable
-        path: dist/"ImageMorph Pro"*
