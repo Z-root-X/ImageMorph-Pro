@@ -14,7 +14,7 @@ ImageMorph Pro is a simple, open-source desktop application for converting image
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/ImageMorphPro.git
+    git clone https://github.com/Z-root-X/ImageMorph-Pro.git
     cd ImageMorphPro
     ```
 2.  Create a virtual environment (recommended):
