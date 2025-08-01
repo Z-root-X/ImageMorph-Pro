@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python Caches
+__pycache__/
+*.pyc
+
+# Build and Distribution Artifacts
+dist/
+build/
+*.spec
+
+# IDE and OS files
+.idea/
+.vscode/
+*.DS_Store
